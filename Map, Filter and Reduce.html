@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Map method returns the new array after given modifications//
+        let arr = [4, 7, 99]
+
+        let a =  arr.map((value, index, array) =>{
+            console.log(value, index , array);
+
+            return value + index;
+        })
+        console.log(a);
+
+        //Filter Method//
+        let arr2 = [7, 8, 9, 66, 76, 67, 88, 90];
+
+       let b = arr2.filter((value, index)=>{
+            return value>9;
+        })
+
+        console.log(b);
+
+        //Reduce Method//
+        let c = arr2.reduce((m, n)=>{
+            return m+n;
+        })
+        console.log(c)
+
+
+    </script>
+</body>
+</html>

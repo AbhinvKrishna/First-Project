@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with image Transform effect</title>
+    <link rel="stylesheet" href="Image Transform effect website.css">
+</head>
+<body>
+    <div class="hero" id="first">
+        <img src="Web logo.png" alt="Image Here" class="logo">
+        <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">SERVICES</a></li>
+            <li><a href="">HIRE ME</a></li>
+        </ul>
+        <img src="moon.png" alt="" id="icon">
+        </nav>
+
+        <div class="info">
+            <h1><span id="im">I'm</span>  <span class="ak">Abhinav Krishna</span></h1>
+            <p id="para">This is my official portfolio website to showcase my all works related to 
+               <br> web developement and UI/UX designs
+            </p>
+        </div>
+
+        <div class="img-box">
+            <img src="Code Heart.png" alt="" class="back-img">
+            <img src="Vele.png" alt="" class="main-img">
+        </div>
+
+
+    </div>
+
+    <script>
+
+        var icon = document.getElementById("icon")
+        icon.onclick = function(){
+            let first = document.getElementById("first")
+            first.classList.toggle("dark-theme")
+ 
+            let im = document.getElementById("im")
+            let para = document.getElementById("para")
+            
+
+            let navIcons = document.querySelectorAll('a')
+           
+            if(first.classList.contains("dark-theme")){
+                icon.src = "sun.png"
+                im.style.color = "lightgreen"  
+                para.style.color = "white"    
+               navIcons.forEach((value)=>{
+                value.style.color = "white"
+
+               })
+            }
+            else{
+                icon.src = "moon.png"
+                im.style.color = "black"
+                para.style.color = "black"
+                navIcons.forEach((value)=>{
+                value.style.color = "black"
+
+               })
+                
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>
